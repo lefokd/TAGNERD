@@ -1,0 +1,2 @@
+class ClothImage < ApplicationRecord
+end

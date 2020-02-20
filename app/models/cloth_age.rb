@@ -1,0 +1,2 @@
+class ClothAge < ApplicationRecord
+end
