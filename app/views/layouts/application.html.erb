@@ -9,7 +9,25 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
   <body>
-    <%= yield %>
+    <div id="wrapper">
+      <header class="navbar navbar-inverse">
+        <%= render 'layouts/user_header' %>
+      </header>
+      <main>
+          <%= yield %>
+      </main>
+      <footer>
+        <div class="text-center">
+          <p class="footer-text">© All rights recerved by SCunk.Inc.</p>
+        </div>
+        <!-- <div class="social">
+          <i class="fa fa-facebook-square"></i>
+          <i class="fa fa-twitter-square"></i>
+          <i class="fa fa-instagram"></i>
+        </div> -->
+      </footer>
+    </div>
   </body>
 </html>

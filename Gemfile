@@ -63,7 +63,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # ログイン機能やユーザ登録機能などを簡単に実装できる
 gem 'devise'
 # ページデザイン
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass'
 gem 'jquery-rails'
 
 # 画像アップロード機能
@@ -81,5 +81,5 @@ gem 'paranoia'
 gem 'pry-byebug'
 gem 'pry-rails'
 
-gem "refile", require: "refile/rails", github: 'manfe/refile'
+gem "refile", require: "refile/rails", github: 'refile/refile'
 gem "refile-mini_magick"

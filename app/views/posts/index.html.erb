@@ -1,0 +1,45 @@
+<%= form_for(@post) do |f| %>
+  <h2>New post</h2>
+
+  <h4>Title</h4>
+  <%= f.text_field :title %></br>
+  <%= f.label :TAG  %>
+  <%= f.attachment_field :tag_image %></br>
+  <%= f.label :CLOTH  %>
+  <%= f.file_field :cloth_images ,multiple: true  %>
+  <h4>Category</h4>
+  <%= f.select :brand_name,Post.brand_names.keys %>
+  <%#= f.text_area :body %>
+  <%= f.submit 'Create Post', class: "btn btn-primary col-xs-12" %>
+<% end %>
+
+<!-- <div class="col-xs-9"> -->
+    <h2>Posts</h2>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>TAG</th>
+          <th>Cloth</th>
+          <th>Shop</th>
+        </tr>
+      </thead>
+
+      <% @posts.each do |post| %>
+        <tbody>
+          <tr>
+            <td><%#= link_to post_path(post.id) do%><%= post.title  %>
+              <%# end %></td>
+            <td>
+              <%= attachment_image_tag post, :tag_image, size: "300x200", format:'jpeg' %>
+             </td>
+            <td>
+              <% post.cloth_images.each do |cloth| %>
+              <%= image_tag(post.cloth_images , size: "300x200") %>
+              <% end %>
+              </td>
+            <td><%= post.body %></td>
+          </tr>
+        </tbody>
+      <% end %>
+    </table>
