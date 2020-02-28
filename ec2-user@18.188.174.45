@@ -1,0 +1,4 @@
+DB_USERNAME="root"
+DB_PASSWORD="lef12151997"
+DB_HOST="rds-mysql-server.cmhetiwvi1kn.us-east-2.rds.amazonaws.com"
+DB_DATABASE="TAGNERD"
